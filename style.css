@@ -333,3 +333,94 @@ body::before {
     color: #555;
     font-style: italic;
 }
+
+css  .criadora img.criadora-foto {
+    display: block;
+    width: 110px !important;
+    height: 110px !important;
+    min-width: 110px;
+    max-width: 110px;
+    min-height: 110px;
+    max-height: 110px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50% !important;
+    border: 4px solid #8caf87 !important;
+    padding: 0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.criadora p {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+.criadora strong {
+    color: #527b50;
+}     
+ 
+
+
+
+.perfil-criadora {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+}
+
+.borda-foto-perfil {
+    position: relative;
+    width: 136px;
+    height: 136px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    isolation: isolate;
+}
+
+.borda-foto-perfil::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(
+        red,
+        orange,
+        yellow,
+        lime,
+        cyan,
+        blue,
+        violet,
+        red
+    );
+
+    animation: girar-borda 3s linear infinite;
+    z-index: -1;
+}
+
+.foto-perfil {
+    width: 124px;
+    height: 124px;
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 35%;
+    border: 3px solid white;
+    position: relative;
+    z-index: 1;
+}
+
+
+@keyframes girar-borda {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
