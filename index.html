@@ -10,21 +10,34 @@
 </head>
 <body>
     <div class="conteiner">
+
         <header class="cabecalho-projeto">
             <h1>Cadastro de produtos</h1>
+
             <button type="button" id="btn-conceito" class="btn-conceito">
                 Ver Conceito Bootstrap
             </button>
-        </header>
-        
-        <div class="perfil-criadora">
-            <div class="borda-foto-perfil">
-                <img src="1000070223.jpg" alt="Minha foto" class="foto-perfil">
-            </div>
-        </div>
 
+            <!-- DUAS FOTOS CENTRALIZADAS -->
+            <div class="perfil-criadora">
+
+                <div class="borda-foto-perfil">
+                    <img src="1000070223.jpg"
+                         alt="Foto da criadora"
+                         class="foto-perfil">
+                </div>
+
+                <div class="borda-foto-perfil">
+                    <img src="IMG_1549.jpeg"
+                         alt="Segunda foto de perfil"
+                         class="foto-perfil">
+                </div>
+
+            </div>
+        </header>
 
         <form id="produto-form" novalidate>
+
             <div class="form-group">
                 <label for="nome">Nome do produto:</label>
                 <input type="text" id="nome" placeholder="Ex. notebook" required>
@@ -40,6 +53,7 @@
                 <input type="number" id="quantidade" min="1" step="1" placeholder="Ex. 5" required>
             </div>
 
+            <!-- Mensagem inline -->
             <div id="mensagem-erro" class="mensagem-erro" role="alert" aria-live="assertive"></div>
 
             <button type="submit" class="btn-primary">Adicionar produto</button>
@@ -50,6 +64,7 @@
             <button type="button" id="limpar-tabela" class="btn-danger">Limpar tudo</button>
         </div>
 
+        <!-- Pesquisa dinâmica -->
         <div class="form-group busca-grupo">
             <label for="campo-busca">Pesquisar produto:</label>
             <input type="text" id="campo-busca" placeholder="Digite o nome do produto..." autocomplete="off">
@@ -69,12 +84,12 @@
             <tbody></tbody>
             <tfoot></tfoot>
         </table>
+
     </div>
 
-    
-
-   
+    <!-- Modal personalizado -->
     <div id="modal-overlay" class="modal-overlay" aria-hidden="true">
+
         <section class="modal-caixa"
             role="dialog"
             aria-modal="true"
@@ -93,9 +108,9 @@
                     Confirmar
                 </button>
             </div>
-            
 
         </section>
     </div>
+
 </body>
 </html>
